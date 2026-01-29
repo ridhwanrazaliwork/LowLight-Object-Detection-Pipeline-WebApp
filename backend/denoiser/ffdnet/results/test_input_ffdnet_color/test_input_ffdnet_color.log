@@ -1,0 +1,5 @@
+26-01-23 17:15:51.210 : Model path: model_zoo/ffdnet_color.pth
+26-01-23 17:15:51.211 : model_name:ffdnet_color, model sigma:5, image sigma:5
+26-01-23 17:15:51.211 : testsets/test_input
+26-01-23 17:15:52.054 : 2015_00001.png - PSNR: 39.01 dB; SSIM: 0.9442.
+26-01-23 17:15:52.066 : Average PSNR/SSIM(RGB) - test_input_ffdnet_color - PSNR: 39.01 dB; SSIM: 0.9442

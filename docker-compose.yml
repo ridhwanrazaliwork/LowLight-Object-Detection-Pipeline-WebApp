@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: yolo-backend:1.0.0
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./backend/temp:/app/temp
+      - ./models:/app/models:ro
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    image: yolo-frontend:1.0.0
+    ports:
+      - "7860:7860"
+    environment:
+      - API_URL=http://backend:8000
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - backend
+    volumes:
+      - ./models:/app/models:ro
